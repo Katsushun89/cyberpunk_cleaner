@@ -31,13 +31,6 @@ def generate_launch_description():
                 get_package_share_directory('cyberpunk_cleaner'), 'config', '')),
             joy_config, launch.substitutions.TextSubstitution(text='.config.yaml')])
 
-#    joy_config_filepath = LaunchConfiguration(
-#        'joy_config_filepath',
-#        default=os.path.join(
-#            get_package_share_directory('cyberpunk_cleaner'),
-#            'config',
-#            'gamepad.config.yaml'))
-
     joy_node = Node(
         package='joy',
         node_executable='joy_node',
